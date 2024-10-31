@@ -3,7 +3,6 @@ from sqlalchemy.orm import Session
 from langchainmodel.pdf_processor import process_pdf
 import cloudinary.uploader # type: ignore
 from config import cloudinary
-import requests  # type: ignore
 from langchainmodel.nlp_processor import generate_answer
 from fastapi.middleware.cors import CORSMiddleware
 from database import SessionLocal, get_db # type: ignore
