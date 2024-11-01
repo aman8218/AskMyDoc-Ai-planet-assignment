@@ -75,9 +75,9 @@ async def upload_pdf(file: UploadFile = File(...), db: Session = Depends(get_db)
 @app.post("/ask-question", response_model=AnswerResponse)
 async def ask_question(request: QuestionRequest, db: Session = Depends(get_db)):
     # Retrieve the PDF text from the database based on the provided ID
-    print("came for answer")
+    # print("came for answer")
     pdf_text = db.query(PDFText).filter(PDFText.id == request.text_id).first()
-    print("pdf text: ", pdf_text.text,"document_id: ",request.text_id) # type: ignore
+    # print("pdf text: ", pdf_text.text,"document_id: ",request.text_id) # type: ignore
     if not pdf_text:
         raise HTTPException(status_code=404, detail="PDF text not found")
 

@@ -29,8 +29,8 @@ export default function Chat({ documentId }) {
                 throw new Error(errorData.detail || "Server error");
             } 
         } catch (error) {
-            const errorMsg = error.response?.data?.detail || "An error occurred. Please try again.";
-            setFlashMessage(errorMsg);
+            // const errorMsg = error.response?.data?.detail || "An error occurred. Please try again.";
+            // setFlashMessage(errorMsg);
         } finally {
             setIsProcessing(false); // Reset processing state
             setQuery(""); // Clear the input field
@@ -72,7 +72,7 @@ export default function Chat({ documentId }) {
             </div>
 
             {/* Query Input Form */}
-            <form onSubmit={handleQuerySubmit} className="flex justify-between md:mx-28 mx-5 my-10 border-slate-300 bg-zinc-50  h-12 p-2 rounded items-center rounded-md absolute bottom-0 left-5 right-5">
+            <form onSubmit={handleQuerySubmit} className="flex justify-between md:mx-28 mx-5 my-10 border-slate-300 bg-zinc-50  h-12 p-2 rounded items-center rounded-md relative bottom-0 left-5 right-5">
                 <input
                     type="text"
                     value={query}

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // const API_URL = 'http://127.0.0.1:8000'; // Update with your backend URL if different
 
-const API_URL = 'https://askmydoc-ai-planet-assignment.onrender.com'; // Update with your backend URL if different
+const API_URL = 'https://askmydoc-ai-planet-assignment.onrender.com'; 
 
 // Upload document function
 export const uploadDocument = async (data) => {
