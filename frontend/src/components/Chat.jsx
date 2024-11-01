@@ -72,7 +72,7 @@ export default function Chat({ documentId }) {
             </div>
 
             {/* Query Input Form */}
-            <form onSubmit={handleQuerySubmit} className="flex justify-between md:mx-28 mx-5 my-10 border-slate-300 bg-zinc-50  h-12 p-2 rounded items-center rounded-md">
+            <form onSubmit={handleQuerySubmit} className="flex justify-between md:mx-28 mx-5 my-10 border-slate-300 bg-zinc-50  h-12 p-2 rounded items-center rounded-md absolute bottom-0 left-5 right-5">
                 <input
                     type="text"
                     value={query}
